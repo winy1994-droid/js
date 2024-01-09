@@ -23,13 +23,52 @@ function ball3() {
 }
 
 async function execute() {
-try {
-  console.log(await ball1());
-  console.log(await ball2());
-  console.log(await ball3());
-} catch (error) {
-  console.log(error);
-}
+  try {
+    console.log(await ball1());
+    console.log(await ball2());
+    console.log(await ball3());
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 execute();
+
+
+
+
+
+function person1() {
+  if (true) {
+    return "the person1 won";
+  } else {
+    throw new Error("the person1 failed");
+  }
+}
+
+function person2() {
+  if (true) {
+    return "the person2 won";
+  } else {
+    throw new Error("the person2 failed");
+  }
+}
+
+function person3() {
+  if (true) {
+    return "the person3 won";
+  } else {
+    throw new Error("the person3 failed");
+  }
+}
+
+async function requestResult() {
+  try {
+    console.log(await person1());
+    console.log(await person2());
+    console.log(await person3());
+  } catch (error) {
+    console.log(error);
+  }
+}
+requestResult()
